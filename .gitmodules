@@ -1,0 +1,3 @@
+[submodule "my-projects"]
+	path = my-projects
+	url = https://github.com/atef7534/my-projects.git
