@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block header %}
+  <h1>Sentences in GM</h1>
+{% endblock %}
+{% block links %}
+  <li class="lnk"><a href="/">Names</a></li>
+  <li class="lnk"><a href="/verbs">Verbs</a></li>
+  <li class="lnk active"><a href="/sentences">Sentences</a></li>
+{% endblock %}
+{% block body %}
+  <div class="sentences">
+    {% for sen in sentences %}
+    <div class="box" data-id="{{ sen[0] }}">
+      <p class="sentenceGM" contenteditable="true" oninput="editSentence(this.parentElement.getAttribute('data-id'), this.textContent, 'sentenceGM')">{{ sen[1] }}</p>
+      <p class="sentenceAR" contenteditable="true" oninput="editSentence(this.parentElement.getAttribute('data-id'), this.textContent, 'sentenceAR')">{{ sen[2] }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="add-sentence">
+    <input type="text" value="" placeholder="German sentence ..." autofocus autocomplete="off" class="gm-sen">
+    <input type="text" value="" placeholder="الترجمة" autocomplete="off" class="ar-sen">
+    <input type="submit" value="Add sentence" onclick="handleSen(this.parentElement)">
+  </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="names">
+    <div class="m-words">
+      <h2 class="title">Male Words <span class="m-cnt">{{ m_len }}</span></h2>
+      <div class="content">
+        {% for row in rows %}
+          {% if not row[2] %}
+            <p class="M" data-id="{{ row[0] }}"><span class="der">Der </span>{{ row[1].capitalize() }} <span class="remove-row" onclick="handleRemove(this.parentElement)">X</span></p>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <button class="add-m btn" onclick="addMWord(0)">+</button>
+    </div>
+    <div class="f-words">
+      <h2 class="title">Female Words <span class="m-cnt">{{ f_len }}</span></h2>
+      <div class="content">
+        {% for row in rows %}
+          {% if row[2] %}
+            <p class="F" data-id="{{ row[0] }}"><span class="die">Die </span> {{ row[1].capitalize() }} <span class="remove-row" onclick="handleRemove(this.parentElement)">X</span></p>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <button class="add-f btn" onclick="addMWord(1)">+</button>
+    </div>
+  </div>
+{% endblock %}
+  

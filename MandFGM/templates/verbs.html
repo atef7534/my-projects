@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block header %}
+  <h1>Verbs in GM</h1>
+{% endblock %}
+{% block links %}
+  <li class="lnk"><a href="/">Names</a></li>
+  <li class="lnk active"><a href="/verbs">Verbs</a></li>
+  <li class="lnk"><a href="/sentences">Sentences</a></li>
+{% endblock %}
+{% block body %}
+  <div class="verbs">
+    <h1>Verbs</h1>
+    <div class="content">
+      {% for row in rows %}
+      <div class="box" data-id="{{ row[0] }}">
+        <p class="verbGM">{{ row[1] }} </p>
+        <p class="verbAR">{{ row[2] }} </p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="add-verbs">
+      <input type="text" value="" autofocus autocomplete="off" placeholder="German Verb" class="inp">
+      <input type="text" value="" autocomplete="off" placeholder="الترجمة بالعربي" class="inp">
+      <input type="submit" name="Add Verb" value="Add Verb" class="add-verb" onclick="handleVerb(this.parentElement)">
+    </div>
+  </div>
+{% endblock %}

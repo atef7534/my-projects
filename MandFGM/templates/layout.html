@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Application</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="header">
+    {% block header %}
+      <h1>Male and Female Names in GM</h1>
+    {% endblock %}
+    <ul>
+      {% block links %}
+        <li class="lnk active"><a href="/">Names</a></li>
+        <li class="lnk"><a href="/verbs">Verbs</a></li>
+        <li class="lnk"><a href="/sentences">Sentences</a></li>
+      {% endblock %}
+    </ul>
+  </div>
+  <div class="landing">
+    {% block body %}
+    {% endblock %}
+  </div>
+  <div class="half-page"></div>
+  <script src="../static/script.js"></script>
+</body>
+</html>
