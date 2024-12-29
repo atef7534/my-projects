@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer - {% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="static/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <script src="static/jquery.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h2 class="title">My Pray</h2>
+    {% if not session["user_id"] %}
+      <div class="login">
+        <a class="a-login" href="/login" type="submit">Login</a>
+        <a class="a-register" href="/register" type="submit">Register</a>
+      </div>
+    {% else %}
+      <div class="logout">
+        <a href="/logout" class="a-logout" type="submit">Logout</a>
+      </div>
+    {% endif %}
+    <div class="colors">
+      <span class="col purple" data-col="#800080"></span>
+      <span class="col blue" data-col="#0075FF"></span>
+      <span class="col green" data-col="#90ee90"></span>
+      <span class="col yellow" data-col="#ffd800"></span>
+    </div>
+  </header>
+  {% block body %}
+  {% endblock %}
+  <script src="static/main.js"></script>
+</body>
+</html>

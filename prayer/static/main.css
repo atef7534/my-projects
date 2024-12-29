@@ -1,0 +1,182 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "cairo", sans-serif;
+}
+header
+{
+  background-color: purple;
+  position: relative;
+  transition: background-color 0.5s;
+}
+.title
+{
+  padding: 6px;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+  font-family: "cairo";
+  font-size: 25px;
+}
+.colors
+{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 10%;
+}
+.col
+{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+.col.active
+{
+  display: none;
+}
+.purple
+{
+  background-color: #800080;
+}
+.blue
+{
+  background-color: #0075FF;
+}
+.yellow
+{
+  background-color: #ffd800;
+}
+.green
+{
+  background-color: #90ee90;
+}
+.col:hover
+{
+  box-shadow: 0px 0px 0px 3px rgb(78, 188, 238);
+}
+
+.daily-prayer
+{
+  margin: auto;
+  padding: 30px;
+}
+.title-prayers
+{
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  background-color: beige;
+  margin-bottom: 20px;
+}
+table.table-home
+{
+  width: 100%;
+  border: 1px solid #DDD;
+  padding: 1px;
+  border-collapse: collapse;
+}
+.table-home th
+{
+  padding: 5px;
+  color: #FFF;
+  text-align: center;
+}
+.table-home td
+{
+  text-align: center;
+}
+.correct
+{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(80, 197, 80);
+  display: block;
+  margin: auto;
+}
+
+form
+{
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+}
+.name,
+.password
+{
+  width: 300px;
+  padding: 4px 4px 4px 8px;
+  border: 1.5px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.btn
+{
+  font-weight: bold;
+  width: 80px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s; 
+}
+div.login,
+div.logout
+{
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translate(-50%, -50%);
+}
+.a-login,
+.a-register,
+.a-logout
+{
+  text-decoration: none;
+  color: #FFF;
+  margin-right: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  transition: color 0.4s;
+}
+.a-login:hover,
+.a-register:hover,
+.a-logout:hover
+{
+  color: #0080ff;
+  font-weight: bold;
+}
+
+/* demo styling */
+.current
+{
+  padding: 20px;
+  text-align: center;
+  background-color: #ffd800;
+  width: 80%;
+  margin: 20px auto 0px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+}
+.all
+{
+  width: 80%;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+}
+.all tr
+{
+  text-align: center;
+}

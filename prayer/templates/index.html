@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}
+  Home
+{% endblock %}
+
+{% block body %}
+<div class="current"></div>
+<table class="all">
+</table>
+  <div class="daily-prayer">
+    <h2 class="title-prayers">Prayers Today</h2>
+    <table class="table-home">
+      <thead class="tt">
+        <tr>
+          <th>الصلاة</th>
+          <th>التوقيت</th>
+          <th>المتبقي من الوقت</th>
+          <th>تمت تأديتها أم لا</th>
+          <th>الوقت التي تم تأديتها فيه</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>صلاة الفجر</td>
+          <td>4: 13</td>
+          <td>12:10:8</td>
+          <td><span class="correct"></span></td>
+          <td>4:25 AM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $(".current").load("https://www.salatcalendar.com/ .card-body #countdown");
+      $(".all").load("https://www.google.com/search?q=%D9%85%D9%88%D8%A7%D9%82%D9%8A%D8%AA+%D8%A7%D9%84%D8%B5%D9%84%D8%A7%D8%A9&oq=%D9%85%D9%88&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIQCAEQRRgTGCcYOxiABBiKBTIHCAIQABiABDIGCAMQRRhAMgYIBBBFGDkyBggFEEUYPTIGCAYQRRg9MgYIBxBFGD3SAQc2OTJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8 .v2lyzd tbody tr")
+    });
+  </script>
+{% endblock %}
